@@ -26,7 +26,7 @@ namespace SignalR.StockTicker
         private readonly Timer _timer;
         private volatile bool _updatingStockPrices = false;
 
-        private StockTicker(IHubConnectionContext clients)
+        private StockTicker(IHubConnectionContext<dynamic> clients)
         {
             Clients = clients;
 
@@ -51,7 +51,7 @@ namespace SignalR.StockTicker
             }
         }
 
-        private IHubConnectionContext Clients
+        private IHubConnectionContext<dynamic> Clients
         {
             get;
             set;
