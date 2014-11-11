@@ -87,7 +87,7 @@ namespace SignalR.StockTicker
         {
             // Randomly choose whether to update this stock or not
             var r = _updateOrNotRandom.NextDouble();
-            if (r > 1)
+            if (r > .1)
             {
                 return false;
             }
